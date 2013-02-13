@@ -2,7 +2,7 @@ module Globalize
   module ActiveRecord
     class Translation < ::ActiveRecord::Base
 
-      attr_accessible :locale
+      attr_accessible :locale, :as => [:default, :admin]
       validates :locale, :presence => true
 
       class << self
